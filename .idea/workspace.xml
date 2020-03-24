@@ -27,6 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/My Code For Game/Easy_level" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -47,6 +48,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My Code For Game/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonClub-Anders" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My Code For Game/Medium_level" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My Code For Game/Medium_level/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,6 +101,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -97,30 +120,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="183" width="816" height="730" key="#Intentions" timestamp="1585007287796">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" width="816" height="730" key="#Intentions/0.0.1920.1050@0.0.1920.1050" timestamp="1585007287796" />
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583428945176">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1583428945176" />
-    <state width="1899" height="117" key="GridCell.Tab.0.bottom" timestamp="1583980267117">
+    <state width="1899" height="435" key="GridCell.Tab.0.bottom" timestamp="1585010120625">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="117" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583980267117" />
-    <state width="1899" height="117" key="GridCell.Tab.0.center" timestamp="1583980267117">
+    <state width="1899" height="435" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585010120625" />
+    <state width="1899" height="435" key="GridCell.Tab.0.center" timestamp="1585010120625">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="117" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583980267117" />
-    <state width="1899" height="117" key="GridCell.Tab.0.left" timestamp="1583980267117">
+    <state width="1899" height="435" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585010120625" />
+    <state width="1899" height="435" key="GridCell.Tab.0.left" timestamp="1585010120625">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="117" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583980267117" />
-    <state width="1899" height="117" key="GridCell.Tab.0.right" timestamp="1583980267117">
+    <state width="1899" height="435" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585010120625" />
+    <state width="1899" height="435" key="GridCell.Tab.0.right" timestamp="1585010120625">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="117" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583980267117" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1584000009560">
+    <state width="1899" height="435" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585010120625" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1585047508055">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1584000009560" />
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585047508055" />
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585044907237">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585044907237" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1583979205337">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

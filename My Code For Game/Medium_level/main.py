@@ -41,9 +41,6 @@ enemy.get_stat()
 # start main loop of game
 # ##########################
 keep_playing = True
-skip_enemy_dmg = False
-enemy_damage = 0
-magic_damage = 0
 while (keep_playing == True):
     """ ----------------------------------------------
         First player take action to damage the enemy
@@ -54,9 +51,12 @@ while (keep_playing == True):
     if player_action == 1:
         """ First player generates damage for enemy """
         enemy_damage = player.generate_dmg(player_action)
+        """ Then enemy generates damage for player """
+        player_damage = enemy.generate_dmg(player_action)
+        """ no magic damage in this case """
         magic_damage = 0
-    elif player_action == 2:   # dark magic
-        """ at this stage player does generates magic powers """
+    elif player_action == 2:
+        """ at this stage enemy does not generate magic powers """
         enemy_damage = 0
         magic = player.choose_magic()
         if magic == 1:
@@ -69,70 +69,20 @@ while (keep_playing == True):
             magic_damage = player.generate_magic_damage()
         else:
             keep_playing = False
-    elif player_action == 3: # light magic = healing
-        """ Player will be given healing and at the same time no enemy damage """
-        enemy_damage = 0
-        magic_damage = 0
-        skip_enemy_dmg = True
-        new_hp = player.healing()
-        if new_hp == player.max_hp:
-            print("\t\t\t Your HP is full")
-        else:
-            print("\t\t\t The light magic heals 100 points of hp")
-        # endif
-    elif player_action == 9:    # player wants end the game, so no enemy action
+    elif player_action == 9:
         keep_playing = False
-        skip_enemy_dmg = True
-    # endif
 
     """  First player gives a damage to the enemy """
-    if skip_enemy_dmg == False:
-        new_hp = enemy.take_dmg(enemy_damage)
-        new_mp = enemy.update_mp(magic_damage)
-    else:
-        skip_enemy_dmg = False
-    # endif
+    new_hp = enemy.take_dmg(enemy_damage)
+    new_mp = enemy.update_mp(magic_damage)
 
     print("\t\t\t Enemy's damage is: {}".format(enemy_damage))
     print("\t\t\t Enemy's magic damage is: {}".format(magic_damage))
 
-    """ player wants continue playing the game (default supposition)
-        -- if this False -> player wants to end the game, so no enemy actions """
-    if keep_playing == True:
-        """ Then enemy's turn to give a damage the player
-            enemy's brain: enemy will now select the action randomly
-            If enemy chooses magic, and the magic choice is also a random choice
-            generate_dmg """
-        enemy_action = enemy.enemy_action_magic()
-        """ after the choice of action (or amgic) print out the choice """
-        if enemy_action == 1:    # basic action
-            print("\t\t\t Enemy's choice: basic action")
-        elif enemy_action == 2:    # Healing
-            print("\t\t\t Enemy's choice: Healing")
-        elif enemy_action == 3:    # magic - Fire
-            print("\t\t\t Enemy's choice: Fire")
-        elif enemy_action == 4:    # magic - Lightning
-            print("\t\t\t Enemy's  choice: Lightning")
-        elif enemy_action == 5:    # magic - Hurricane
-            print("\t\t\t Enemy's  choice: Hurricane")
-        elif enemy_action == 6:    # magic - Corona
-            print("\t\t\t Enemy's  choice: Corona")
-        # endif
-        """ Then enemy generates damage for player """
-        player_damage = enemy.generate_player_dmg(enemy_action)
-        if enemy_action == 1:
-            """ no magic damage in this case """
-            magic_damage = 0
-            new_hp = player.take_dmg(player_damage)
-        elif 3 <= enemy_action <= 6:
-            """ no action damage in this case """
-            magic_damage = player_damage
-            new_mp = player.update_mp(magic_damage)
-            player_damage = 0
-        # endif
-        # new_hp = player.take_dmg(player_damage)
-        # new_mp = player.update_mp(magic_damage)
-    # endif if keep_playing == True:
+    """ Then enemy gives a damage the playere """
+    magic_damage = 0
+    new_hp = player.take_dmg(player_damage)
+    new_mp = player.update_mp(magic_damage)
 
     print("\t\t\t player's damage is: {}".format(player_damage))
     print("\t\t\t player's magic damage is: {}".format(magic_damage))
@@ -150,7 +100,6 @@ while (keep_playing == True):
         keep_playing = False
     else:
         pass
-    # endif
 
 # end while
 print_line()

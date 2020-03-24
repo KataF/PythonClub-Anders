@@ -24,7 +24,7 @@ class Person:
         self.max_mp = mp
         self.atk_high = atk + 10
         self.atk_low = atk - 10
-        self.action = ["Attack", "Magic, Heal"]
+        self.action = ["Attack", "Magic"]
 
     def get_stat(self):
         """ This function will print out player's/enemy's name and statistics of HP/MaxHP, MP/MaxMP
@@ -77,7 +77,6 @@ class Person:
         print("\t\t\t Actions are:")
         print("\t\t\t 1 - Attack")
         print("\t\t\t 2 - Magic")
-        print("\t\t\t 3 - Heal")
         print("\t\t\t 9 - exit")
         atk = int(input('\t\t\t '))
         return atk
@@ -105,7 +104,6 @@ class Person:
         print("\t\t\t 2 - Lightning")
         print("\t\t\t 3 - Hurricane")
         print("\t\t\t 4 - Corona")
-        # print("\t\t\t 5 - Power Boost") - future feature
         magic = int(input('\t\t\t '))
         return magic
 
@@ -118,73 +116,10 @@ class Person:
             returns: damage_value - player's / enemy's magic damage value
         """
         magic_damage = 0
-        """if xxx == 1:"""
         m_low = -15
         m_high = 15
         magic_damage = Magic.dmg + random.randrange(m_low, m_high)
-        """elif xxx == 2:
-            magic_damage -= Magic.dmg;"""
-        # endif
         return magic_damage
-
-    def healing(self):
-        """ This function will heal player and gives more health points.
-            So far this is fix value for healing: 100 hp points.
-            Function will also check health points that they does not
-            go to negative or over the maximum health point.
-            input parameters:
-                xxxxxx
-            returns: health point - player's new health point
-        """
-        self.hp = self.hp + 100
-        if self.hp > self.max_hp:
-            self.hp = self.max_hp
-        elif 0 < self.hp and self.hp < self.max_hp:
-            dummy = 0    # return as it is
-        elif self.hp < 0:
-            self.hp = 0
-        # endif
-        return self.hp
-
-    def enemy_action_magic(self):
-        """ Enemy's brain: choose what kind of action to take
-            Generate randomly what kind of action enemy will choose
-            input parameters:
-                None
-            returns: enemy_action - enemy's choice
-        """
-        # these initial number equals to action at main module
-        action_min = 1
-        action_max = 3
-        magic_min = 3
-        magic_max = 6
-        enemy_action = random.randrange(action_min, action_max)
-        if enemy_action == 3:
-            enemy_action = random.randrange(magic_min, magic_max)
-        # endif
-        return enemy_action
-
-    def generate_player_dmg(self, action):
-        """ Enemy's brain: generate damage for the player
-            Generate randomly damage value
-            input parameters:
-                action - describes what action damage value to generate
-            returns: player_damage -  player's damage value
-        """
-        if action == 1: # basic action
-            player_damage = self.generate_dmg(action)
-        elif action == 2: # Healing
-            player_damage = self.healing()
-        elif action == 3: # magic - Fire
-            player_damage = self.generate_magic_damage()
-        elif action == 4: # magic - Lightning
-            player_damage = self.generate_magic_damage()
-        elif action == 5: # magic - Hurricane
-            player_damage = self.generate_magic_damage()
-        elif action == 6:  # magic - Corona
-            player_damage = self.generate_magic_damage()
-        # endif
-        return player_damage
 
 """ define Magic class """
 class Magic:
